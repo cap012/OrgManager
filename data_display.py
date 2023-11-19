@@ -179,7 +179,7 @@ def modify_employee():
             case '2':
                 try:
                     new_minit = input("Enter the new middle initial (one char, ex. 'A'): ")
-                    query = "UPDATE EMPLOYEE SET Minit = '" + chr(new_minit) + "' WHERE Ssn=" + str(ssn)
+                    query = "UPDATE EMPLOYEE SET Minit = '" + str(new_minit) + "' WHERE Ssn=" + str(ssn)
                     cursor.execute(query)
                     database.commit()
                     print("Successfully updated employee middle initial.")
@@ -223,7 +223,7 @@ def modify_employee():
             case '6':
                 try:
                     new_sex = input("Enter the new sex (one char, ex. 'M', 'F'): ")
-                    query = "UPDATE EMPLOYEE SET Sex = '" + chr(new_sex) + "' WHERE Ssn=" + str(ssn)
+                    query = "UPDATE EMPLOYEE SET Sex = '" + str(new_sex) + "' WHERE Ssn=" + str(ssn)
                     cursor.execute(query)
                     database.commit()
                     print("Successfully updated employee sex.")
